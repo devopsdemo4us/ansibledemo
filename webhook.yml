@@ -1,0 +1,8 @@
+- name:  create a new webhook that triggers on push (password auth)
+  github_webhook:
+    repository: devopsdemo4us/ansibledemo
+    url: https://github.com/devopsdemo4us/ansibledemo/hooks/
+    events:
+      - push
+    user: "{{ github_user }}"
+    password: "{{ github_password }}"

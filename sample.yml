@@ -1,0 +1,10 @@
+# tasks file for vhost
+-  hosts: dev
+   become: yes
+   remote_user: lok
+   
+-  tasks:
+   - name: http install
+     yum: name=httpd update_cache=yes state=latest
+#   - name: start and enable httpd
+#    service: name=httpd state=started enabled=true

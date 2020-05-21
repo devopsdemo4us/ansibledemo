@@ -1,0 +1,7 @@
+- hosts: localhost
+  remote_user: lok
+  become: true
+ 
+  tasks:  
+  - name: Install Tree app
+    yum: pkg=tree state=latest
