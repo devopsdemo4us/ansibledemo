@@ -1,0 +1,5 @@
+---
+  - hosts: testing
+    tasks:
+      - name: 
+        shell: hostname
