@@ -1,0 +1,14 @@
+- hosts: dev
+  remote_user: lok
+  become: yes
+ 
+  tasks:
+  - name: install httpd (Red Hat)
+    yum:
+      name: httpd
+    when: 'ansible_distribution == "RedHat"'
+
+  - name: install apache (Debian)
+    apt:
+      name: apache2
+    when: 'ansible_distribution == "Debian"'

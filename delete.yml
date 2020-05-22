@@ -1,0 +1,7 @@
+- hosts: dev
+
+  tasks:
+  - name: delete file
+    file:
+      path: ~/one.txt
+      state: absent

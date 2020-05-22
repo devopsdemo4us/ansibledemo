@@ -1,0 +1,12 @@
+- hosts: dev
+  remote_user: lok
+  become: yes
+
+- name: Install the required rpms
+  yum: 
+    name: "{{ item }}"
+    state: present
+  with_items:
+      - "{{ wget }}"
+      - "{{ git }}"
+      - "{{ tree }}"
